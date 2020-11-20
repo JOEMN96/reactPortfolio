@@ -26,6 +26,13 @@ nav {
   background-color: var(--white);
   box-shadow: var(--navBoxShadow);
   transition: var(--maintransition);
+  position: fixed;
+  width: 100%;
+  transition: var(--maintransition);
+}
+
+.sticky {
+  padding: 10px;
 }
 
 .navMain {
