@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function NavBar() {
   const [isToggled, setisToggled] = useState(false);
@@ -6,6 +6,22 @@ function NavBar() {
     let nav = document.querySelector("nav");
     nav.classList.toggle("sticky", window.scrollY > 0);
   });
+
+  // Cursor functions
+
+  useEffect(() => {
+    let customCursor = document.querySelector(".customCursor");
+    document.addEventListener("mousemove", (e) => {
+      customCursor.setAttribute(
+        "style",
+        `top:${e.pageY - 12}px; left:${e.pageX - 11}px;`
+      );
+    });
+    document.addEventListener("mousewheel", () => {
+      customCursor.setAttribute("style", `top:${-100}px; left:${-100}px;`);
+    });
+  }, []);
+
   return (
     <>
       <nav>
@@ -39,7 +55,8 @@ function NavBar() {
           </div>
         </div>
       </nav>
-      <div style={{ height: "200vh" }} className="col"></div>
+
+      <div className="customCursor"></div>
     </>
   );
 }
