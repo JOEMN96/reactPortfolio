@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { GlobalContext } from "../context/AppContext";
+import SubMenu from "./SubMenu";
 
 function NavBar() {
+  const { openSubmenu } = GlobalContext();
   const [isToggled, setisToggled] = useState(false);
   window.addEventListener("scroll", () => {
     let nav = document.querySelector("nav");
@@ -21,6 +24,16 @@ function NavBar() {
       customCursor.setAttribute("style", `top:${-100}px; left:${-100}px;`);
     });
   }, []);
+
+  // Display SUbMenu
+
+  const displaySubMenu = (e) => {
+    const btn = e.target.textContent;
+    const tempLocation = e.target.getBoundingClientRect();
+    const center = (tempLocation.left + tempLocation.right) / 2;
+    const bottom = tempLocation.bottom - 3;
+    openSubmenu(btn, { center, bottom });
+  };
 
   return (
     <>
@@ -47,11 +60,15 @@ function NavBar() {
           </div>
 
           <div className={`navLinks ${isToggled ? "nav-show " : "nav-hide "}`}>
-            <a className="animDelayFIx" href="">
+            <a onMouseOver={displaySubMenu} className="animDelayFIx" href="">
               About
             </a>
-            <a href="">Works</a>
-            <a href="">Contact</a>
+            <a onMouseOver={displaySubMenu} href="">
+              Works
+            </a>
+            <a onMouseOver={displaySubMenu} href="">
+              Contact
+            </a>
           </div>
         </div>
       </nav>

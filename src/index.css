@@ -25,12 +25,13 @@ a {
 /* NAV Bar */
 
 nav {
-  background-color: var(--white);
+  background-color: var(--mattBlack);
   box-shadow: var(--navBoxShadow);
   position: sticky;
   top: 0;
   width: 100%;
   transition: var(--maintransition);
+  color: #ffff;
 }
 
 .sticky {
@@ -69,6 +70,7 @@ nav {
   justify-content: center;
   align-items: center;
   transition: var(--maintransition);
+  position: relative;
 }
 
 .navLinks a {
@@ -85,7 +87,7 @@ nav {
   width: 18px;
   height: 2px;
   display: block;
-  background-color: var(--whiteBgTextColor);
+  background-color: #fff;
 }
 
 .trigger span:nth-child(2) {
@@ -105,7 +107,25 @@ nav {
   height: 200px;
 }
 
+.submenu {
+  display: none;
+}
+
 /* !! NAV Bar */
+
+.submenu::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 @media screen and (min-width: 700px) {
   .trigger {
@@ -121,5 +141,18 @@ nav {
   }
   .navLinks {
     display: block !important;
+  }
+
+  .submenu {
+    top: 40px;
+    left: 67%;
+    z-index: 3;
+    padding: 20px;
+    position: absolute;
+    display: none;
+  }
+
+  .submenuShow {
+    display: block;
   }
 }

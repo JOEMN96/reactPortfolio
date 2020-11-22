@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "./index.css";
 import "./assets/grid.css";
+import { AppProvider } from "./context/AppContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppProvider>
+      <App />
+    </AppProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
