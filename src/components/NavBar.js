@@ -60,5 +60,5 @@ function NavBar() {
     </>
   );
 }
-
+// REMOVED STRIPE
 export default NavBar;
