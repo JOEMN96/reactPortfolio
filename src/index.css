@@ -8,6 +8,9 @@
   --navAnim: q 0.65s cubic-bezier(0.23, 1, 0.32, 1) both;
   --maintransition: all 0.5s ease-in-out;
 }
+/* body {
+  overflow: hidden;
+} */
 
 a {
   text-decoration: none;
@@ -25,12 +28,14 @@ a {
 /* NAV Bar */
 
 nav {
-  background-color: var(--white);
+  background-color: var(--black);
   box-shadow: var(--navBoxShadow);
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   transition: var(--maintransition);
+  color: #fff;
+  z-index: 50;
 }
 
 .sticky {
@@ -50,12 +55,13 @@ nav {
 .customCursor {
   width: 30px;
   height: 30px;
-  border: 1px solid #c4c4c4;
+  border: 1px solid #ffff;
   border-radius: 50%;
   position: absolute;
   pointer-events: none;
   top: -100px;
   left: -100px;
+  z-index: 100;
 }
 
 .navLinks a {
@@ -85,7 +91,7 @@ nav {
   width: 18px;
   height: 2px;
   display: block;
-  background-color: var(--whiteBgTextColor);
+  background-color: #ffff;
 }
 
 .trigger span:nth-child(2) {
@@ -103,6 +109,21 @@ nav {
 
 .nav-show {
   height: 200px;
+}
+
+#tsparticles {
+  background-color: var(--black);
+  height: 100vh;
+  /* position: ; */
+}
+
+.floatTxt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  margin-left: -50px;
+  margin-top: -50px;
 }
 
 /* !! NAV Bar */
