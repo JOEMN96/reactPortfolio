@@ -69,6 +69,10 @@ nav {
   font-weight: 500;
 }
 
+.navLinks a:hover {
+  cursor: pointer;
+}
+
 .navLinks {
   display: flex;
   flex-direction: column;
@@ -125,6 +129,19 @@ nav {
   margin-left: -50px;
   margin-top: -50px;
 }
+
+/* Glitch effcet */
+.hidden {
+  opacity: 0;
+}
+
+.console-underscore {
+  display: inline-block;
+  position: relative;
+  top: -0.14em;
+  left: 10px;
+}
+/* !! Glitch effcet */
 
 /* !! NAV Bar */
 
