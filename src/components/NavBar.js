@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [isToggled, setisToggled] = useState(false);
@@ -28,10 +30,12 @@ function NavBar() {
         <div className="navWrapper">
           <div className="navMain">
             <div className="logo">
-              <h2>JoeMN</h2>
+              <Link to="/">
+                <h2>JoeMN</h2>
+              </Link>
             </div>
 
-            <div className="navTriggerWrapper">
+            <div>
               <div
                 className="trigger"
                 onClick={() => {
@@ -46,12 +50,15 @@ function NavBar() {
             </div>
           </div>
 
-          <div className={`navLinks ${isToggled ? "nav-show " : "nav-hide "}`}>
-            <a className="animDelayFIx" href="">
+          <div
+            className="navTriggerWrapper"
+            className={`navLinks ${isToggled ? "nav-show " : "nav-hide "}`}
+          >
+            <Link className="animDelayFIx" to="/about">
               About
-            </a>
-            <a href="">Works</a>
-            <a href="">Contact</a>
+            </Link>
+            <Link to="/work">Works</Link>
+            <Link to="/contact">Contact</Link>
           </div>
         </div>
       </nav>

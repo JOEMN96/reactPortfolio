@@ -1,11 +1,22 @@
 import React, { useEffect } from "react";
 import Particles from "react-particles-js";
 import particlesConfig from "../assets/ParticlesConfig";
+import { motion } from "framer-motion";
+
+const anim = {
+  initial: { y: -200, opacity: 0 },
+  end: {
+    y: 1,
+    opacity: 1,
+    transition: { delay: 1, type: "spring", stiffness: 200 },
+  },
+};
+
 function Home() {
   useEffect(() => {
     // function([string1, string2],target id,[color1,color2])
     consoleText(
-      ["Hello World.", "Iam Joe Mon", "A web developer & designer."],
+      ["Hello !", "Iam Joe Mon", "A web developer & designer."],
       "text",
       ["white", "white", "white"]
     );
@@ -63,12 +74,17 @@ function Home() {
       <Particles params={particlesConfig} />
 
       {/* <h1 className="floatTxt">Hello</h1> */}
-      <h3 className="floatTxt">
+      <motion.h3
+        variants={anim}
+        initial="initial"
+        animate="end"
+        className="floatTxt"
+      >
         <span id="text"></span>{" "}
         <span className="console-underscore" id="console">
           &#95;
         </span>
-      </h3>
+      </motion.h3>
     </div>
   );
 }

@@ -8,9 +8,11 @@
   --navAnim: q 0.65s cubic-bezier(0.23, 1, 0.32, 1) both;
   --maintransition: all 0.5s ease-in-out;
 }
-/* body {
-  overflow: hidden;
-} */
+body {
+  overflow-x: hidden;
+  background-color: var(--black);
+  color: var(--white);
+}
 
 a {
   text-decoration: none;
@@ -30,7 +32,7 @@ a {
 nav {
   background-color: var(--black);
   box-shadow: var(--navBoxShadow);
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   transition: var(--maintransition);
@@ -52,6 +54,10 @@ nav {
   padding: 10px;
 }
 
+.logo a h2:hover {
+  cursor: pointer;
+}
+
 .customCursor {
   width: 30px;
   height: 30px;
@@ -65,7 +71,7 @@ nav {
 }
 
 .navLinks a {
-  margin: auto 10px;
+  margin: 2px 10px;
   font-weight: 500;
 }
 
@@ -117,7 +123,7 @@ nav {
 
 #tsparticles {
   background-color: var(--black);
-  height: 100vh;
+  height: calc(100vh - 49px);
   /* position: ; */
 }
 
@@ -130,7 +136,7 @@ nav {
   margin-top: -50px;
 }
 
-/* Glitch effcet */
+/* Rolling Text */
 .hidden {
   opacity: 0;
 }
@@ -141,9 +147,67 @@ nav {
   top: -0.14em;
   left: 10px;
 }
-/* !! Glitch effcet */
+/* !! Rolling Text */
 
 /* !! NAV Bar */
+
+/* About Page */
+
+.introCOl h2 {
+  padding: 20px;
+}
+.introCOl p {
+  padding: 20px;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.skills {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.underLine {
+  width: 60px;
+  height: 2px;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.aboutMEColorBx {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}
+
+.aboutMEColorBx h3 {
+  padding: 20px;
+  text-align: center;
+}
+.aboutMEColorBx h4 {
+  padding: 20px;
+  padding-top: 10px;
+  color: #7510f7;
+}
+.aboutMEColorBx p {
+  padding: 5px;
+  text-align: center;
+}
+
+.AboutIcon {
+  color: #7510f7;
+  font-size: 40px;
+  margin-top: 30px;
+}
 
 @media screen and (min-width: 700px) {
   .trigger {
@@ -159,5 +223,11 @@ nav {
   }
   .navLinks {
     display: block !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .customCursor {
+    display: none;
   }
 }
