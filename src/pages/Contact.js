@@ -5,4 +5,3 @@ function Contact() {
 }
 
 export default Contact;
-Contact;

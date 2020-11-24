@@ -85,6 +85,7 @@ nav {
   justify-content: center;
   align-items: center;
   transition: var(--maintransition);
+  position: relative;
 }
 
 .navLinks a {
@@ -223,6 +224,19 @@ nav {
   }
   .navLinks {
     display: block !important;
+  }
+
+  .submenu {
+    top: 40px;
+    left: 67%;
+    z-index: 3;
+    padding: 20px;
+    position: absolute;
+    display: none;
+  }
+
+  .submenuShow {
+    display: block;
   }
 }
 
