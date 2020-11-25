@@ -2,7 +2,12 @@ import React from "react";
 import { BiPen } from "react-icons/bi";
 import { SiDevDotTo } from "react-icons/si";
 import { GiStickFrame } from "react-icons/gi";
+import { VscLibrary } from "react-icons/vsc";
+import { BsTools } from "react-icons/bs";
+import { FiServer } from "react-icons/fi";
 import Button from "../components/Button";
+import PDF from "../assets/RESUME.pdf";
+
 function About() {
   return (
     <div className="container aboutContainer">
@@ -57,7 +62,37 @@ function About() {
               <p>Materialize Css</p>
               <p></p>
             </div>
+            <div className="col-md-4">
+              <VscLibrary className="AboutIcon" />
+              <h3>Libraries</h3>
+              <h4> Libraries I Use</h4>
+              <p>Contentful</p>
+              <p>Framer Motion</p>
+              <p>Jquery</p>
+              <p>Animate.js</p>
+              <p></p>
+            </div>
+            <div className="col-md-4">
+              <BsTools className="AboutIcon" />
+              <h3>Tools</h3>
+              <h4> Tools I Use</h4>
+              <p>Git/Github</p>
+              <p>Gulp</p>
+              <p>Babel</p>
+              <p>Webpack</p>
+            </div>
+            <div className="col-md-4">
+              <FiServer className="AboutIcon" />
+              <h3>Backend</h3>
+              <h4> Server side</h4>
+              <p>Firebase</p>
+            </div>
           </div>
+          <p>
+            <a target="_blank" href={PDF}>
+              Click here to view my Resume !
+            </a>
+          </p>
         </div>
       </div>
     </div>
