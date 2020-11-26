@@ -5,7 +5,6 @@ import { GiStickFrame } from "react-icons/gi";
 import { VscLibrary } from "react-icons/vsc";
 import { BsTools } from "react-icons/bs";
 import { FiServer } from "react-icons/fi";
-import Button from "../components/Button";
 import PDF from "../assets/RESUME.pdf";
 
 function About() {

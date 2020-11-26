@@ -7,6 +7,11 @@
   --black: #000;
   --navAnim: q 0.65s cubic-bezier(0.23, 1, 0.32, 1) both;
   --maintransition: all 0.5s ease-in-out;
+  --goldenColor: #8d6f57;
+  /* Use in background Tag */
+  --BgGoldenGradient: linear-gradient(320deg, #1c1c1f, #d0ae9a);
+  --BgSilverGradient: linear-gradient(320deg, #1c1c1f, #72757a);
+  /* Use in background Tag */
 }
 body {
   overflow-x: hidden;
@@ -14,9 +19,9 @@ body {
   color: var(--white);
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   display: none;
-}
+} */
 
 a {
   text-decoration: none;
@@ -215,6 +220,76 @@ nav {
   margin-top: 30px;
 }
 
+/* Contact me Page */
+
+.contactME .row {
+  border: 1px dotted var(--goldenColor);
+  margin-top: 30px;
+}
+
+.mainContactCol h3 {
+  margin-top: 19px;
+}
+
+.mainContactCol {
+  padding: 15px;
+}
+.contactTagP {
+  padding: 15px 0;
+  text-align: justify;
+  margin-bottom: 20px;
+  color: var(--goldenColor);
+}
+
+.contactCard {
+  padding: 20px;
+  background: var(--BgGoldenGradient);
+  color: white;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
+.card2Silver {
+  background: var(--BgSilverGradient);
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.cardHead a {
+  padding: 5px 20px;
+  background-color: #5d5d5d;
+  color: white;
+  border: 1px solid #5d5d5d;
+  border-radius: 5px;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+.contactCol2 {
+  border-left: 1px dotted var(--goldenColor);
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}
+
+.contactIcon {
+  margin-bottom: -3px;
+}
+
+.contactCol2head {
+  padding: 15px;
+}
+
+/* .contactCol2head p {
+  padding: 15px;
+  margin-bottom: 20px;
+} */
+
+/* !! Contact me Page */
+
 @media screen and (min-width: 700px) {
   .trigger {
     display: none;
@@ -251,5 +326,12 @@ nav {
   }
   .floatTxt {
     left: 20%;
+  }
+
+  .contactCol2 {
+    border: 0;
+  }
+  .contactME .row {
+    border: 0;
   }
 }
