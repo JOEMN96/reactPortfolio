@@ -283,12 +283,69 @@ nav {
   padding: 15px;
 }
 
-/* .contactCol2head p {
-  padding: 15px;
-  margin-bottom: 20px;
-} */
-
 /* !! Contact me Page */
+
+/* Works Page */
+
+.worksPage h2 {
+  padding: 30px;
+  padding-bottom: 40px;
+}
+
+.workPgCard {
+  margin-bottom: 30px;
+}
+
+.cardImg img {
+  max-width: 100%;
+}
+
+.workPgCardContent {
+  padding: 15px;
+  background: var(--BgGoldenGradient);
+}
+.workPgCardContent p {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.stacktags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.workPgCardContent span {
+  background-color: #5d5d5d;
+  padding: 6px 6px;
+  margin: 5px 5px;
+}
+
+.externalLink {
+  display: grid;
+  place-items: center;
+  background-color: black !important;
+  margin: 0 auto !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  transform: translateY(-45px);
+  border: 5px solid black;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.externalLink {
+  margin-top: 10px;
+}
+
+.voxforem {
+  color: rgb(0, 96, 221);
+}
+
+/* !! Works Page */
 
 @media screen and (min-width: 700px) {
   .trigger {
