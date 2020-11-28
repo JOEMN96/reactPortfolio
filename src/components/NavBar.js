@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 function NavBar() {
@@ -23,6 +22,12 @@ function NavBar() {
       customCursor.setAttribute("style", `top:${-100}px; left:${-100}px;`);
     });
   }, []);
+
+  const handleClick = (e) => {
+    if (e.target.nodeName === "A") {
+      setisToggled(false);
+    }
+  };
 
   return (
     <>
@@ -53,6 +58,7 @@ function NavBar() {
           <div
             className="navTriggerWrapper"
             className={`navLinks ${isToggled ? "nav-show " : "nav-hide "}`}
+            onClick={handleClick}
           >
             <Link className="animDelayFIx" to="/about">
               About

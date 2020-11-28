@@ -6,10 +6,33 @@ import { VscLibrary } from "react-icons/vsc";
 import { BsTools } from "react-icons/bs";
 import { FiServer } from "react-icons/fi";
 import PDF from "../assets/RESUME.pdf";
+import { motion } from "framer-motion";
+
+const routerAnims = {
+  hidden: {
+    opacity: 0,
+    x: "100vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { delay: 0.2, duration: 0.2 },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeOut" },
+  },
+};
 
 function About() {
   return (
-    <div className="container aboutContainer">
+    <motion.div
+      variants={routerAnims}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="container aboutContainer"
+    >
       <div className="row">
         <div className="col introCOl ">
           <h2>Hi !</h2>
@@ -94,7 +117,7 @@ function About() {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

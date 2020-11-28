@@ -2,7 +2,21 @@ import React, { useEffect } from "react";
 import Particles from "react-particles-js";
 import particlesConfig from "../assets/ParticlesConfig";
 import { motion } from "framer-motion";
-
+const routerAnims = {
+  hidden: {
+    opacity: 0,
+    x: "200vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { delay: 0.2, duration: 0.2 },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeOut" },
+  },
+};
 const anim = {
   initial: { y: -200, opacity: 0 },
   end: {
@@ -70,7 +84,13 @@ function Home() {
   }, []);
 
   return (
-    <div style={{ overflow: "hidden" }}>
+    <motion.div
+      variants={routerAnims}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      style={{ overflow: "hidden" }}
+    >
       <Particles params={particlesConfig} />
 
       {/* <h1 className="floatTxt">Hello</h1> */}
@@ -85,7 +105,7 @@ function Home() {
           &#95;
         </span>
       </motion.h3>
-    </div>
+    </motion.div>
   );
 }
 

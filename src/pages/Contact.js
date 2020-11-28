@@ -5,10 +5,33 @@ import { AiOutlineTwitter } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiPhone } from "react-icons/bi";
 import { RiCodepenLine } from "react-icons/ri";
+import { motion } from "framer-motion";
+
+const routerAnims = {
+  hidden: {
+    opacity: 0,
+    x: "200vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { delay: 0.2, duration: 0.2 },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeOut" },
+  },
+};
 
 function Contact() {
   return (
-    <div className="container contactME">
+    <motion.div
+      variants={routerAnims}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="container contactME"
+    >
       <div className="row ">
         <div className="col-md-6">
           <div className="mainContactCol">
@@ -113,7 +136,7 @@ function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

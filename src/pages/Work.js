@@ -1,17 +1,40 @@
 import React from "react";
-import githubImg from "../assets/images/github.PNG";
 // Images👇🏻
+import githubImg from "../assets/images/github.PNG";
 import AmazonClone from "../assets/images/amazonclone.PNG";
 import akints from "../assets/images/akints.PNG";
 import bizz from "../assets/images/bizz.PNG";
 import mtl from "../assets/images/mtl.PNG";
 import oldportfolio from "../assets/images/oldportfolio.PNG";
+import { motion } from "framer-motion";
+
+const routerAnims = {
+  hidden: {
+    opacity: 0,
+    x: "200vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { delay: 0.2, duration: 0.2 },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeOut" },
+  },
+};
 
 import { BiLinkExternal } from "react-icons/bi";
 
 function Work() {
   return (
-    <section className="worksPage">
+    <motion.section
+      variants={routerAnims}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="worksPage"
+    >
       <h2>Some of the projects i worked on </h2>
       <div className="container">
         <div className="row">
@@ -55,8 +78,8 @@ function Work() {
                 </div>
                 <p>My first site for a client, Design to Web. </p>
                 <div className="stacktags">
-                  <span>Html</span> <span>Css</span>
-                  <span>Materialize Css</span>
+                  <span>Html</span> <span>css</span>
+                  <span>Materialize css</span>
                 </div>
               </div>
             </div>
@@ -64,7 +87,7 @@ function Work() {
           <div className="col-md-6">
             <div className="workPgCard">
               <div className="cardImg">
-                <img src={AmazonClone} alt="" />
+                <img loading="lazy" src={AmazonClone} alt="" />
               </div>
               <div className="workPgCardContent">
                 <div className="externalLink">
@@ -90,7 +113,7 @@ function Work() {
           <div className="col-md-6">
             <div className="workPgCard">
               <div className="cardImg">
-                <img src={oldportfolio} alt="" />
+                <img loading="lazy" src={oldportfolio} alt="" />
               </div>
               <div className="workPgCardContent">
                 <div className="externalLink">
@@ -116,7 +139,7 @@ function Work() {
           <div className="col-md-6">
             <div className="workPgCard">
               <div className="cardImg">
-                <img src={bizz} alt="" />
+                <img loading="lazy" src={bizz} alt="" />
               </div>
               <div className="workPgCardContent">
                 <div className="externalLink">
@@ -151,7 +174,7 @@ function Work() {
           <div className="col-md-6">
             <div className="workPgCard">
               <div className="cardImg">
-                <img src={akints} alt="" />
+                <img loading="lazy" src={akints} alt="" />
               </div>
               <div className="workPgCardContent">
                 <div className="externalLink">
@@ -165,14 +188,14 @@ function Work() {
                 </p>
                 <div className="stacktags">
                   <span>React</span> <span>Contentful</span>
-                  <span>Scss</span>
+                  <span>css</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

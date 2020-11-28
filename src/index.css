@@ -19,9 +19,9 @@ body {
   color: var(--white);
 }
 
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
-} */
+}
 
 a {
   text-decoration: none;
@@ -334,6 +334,10 @@ nav {
   border: 5px solid black;
   color: #fff;
   font-size: 20px;
+  cursor: pointer;
+}
+
+.externalLink * {
   cursor: pointer;
 }
 
