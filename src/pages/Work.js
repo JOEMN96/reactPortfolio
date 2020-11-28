@@ -1,12 +1,13 @@
 import React from "react";
-// Images👇🏻
+import { motion } from "framer-motion";
+
 import githubImg from "../assets/images/github.PNG";
 import AmazonClone from "../assets/images/amazonclone.PNG";
 import akints from "../assets/images/akints.PNG";
 import bizz from "../assets/images/bizz.PNG";
 import mtl from "../assets/images/mtl.PNG";
 import oldportfolio from "../assets/images/oldportfolio.PNG";
-import { motion } from "framer-motion";
+import { BiLinkExternal } from "react-icons/bi";
 
 const routerAnims = {
   hidden: {
@@ -23,8 +24,6 @@ const routerAnims = {
     transition: { ease: "easeOut" },
   },
 };
-
-import { BiLinkExternal } from "react-icons/bi";
 
 function Work() {
   return (
