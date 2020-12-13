@@ -6,6 +6,7 @@ import AmazonClone from "../assets/images/amazonclone.PNG";
 import akints from "../assets/images/akints.PNG";
 import bizz from "../assets/images/bizz.PNG";
 import mtl from "../assets/images/mtl.PNG";
+import movieDB from "../assets/images/movieDB.PNG";
 import oldportfolio from "../assets/images/oldportfolio.PNG";
 import { BiLinkExternal } from "react-icons/bi";
 
@@ -56,6 +57,29 @@ function Work() {
                 <div className="stacktags">
                   <span>React</span> <span>Bootstrap</span>
                   <span>Framer motion</span>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div className="col-md-6">
+            <div className="workPgCard">
+              <div className="cardImg">
+                <img src={movieDB} alt="" />
+              </div>
+              <div className="workPgCardContent">
+                <div className="externalLink">
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://moviedbreact.netlify.app/"
+                  >
+                    <BiLinkExternal />
+                  </a>
+                </div>
+                <p>You can search Movies & webseries</p>
+                <div className="stacktags">
+                  <span>React</span> <span>Context API</span>
+                  <span>Bootstrap</span>
                 </div>
               </div>
             </div>
