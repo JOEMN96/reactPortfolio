@@ -149,7 +149,7 @@ function Work() {
                   </a>
                 </div>
                 <p>
-                  My old portfolio with night mode and a litte neumorphism
+                  My old portfolio with night mode and with neumorphism
                   design Principle.{" "}
                 </p>
                 <div className="stacktags">
