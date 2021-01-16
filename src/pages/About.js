@@ -91,7 +91,7 @@ function About() {
               <p>Framer Motion</p>
               <p>Jquery</p>
               <p>Animate.js</p>
-              <P>Moment.js</p>
+              <p>Moment.js</p>
               <p></p>
             </div>
             <div className="col-md-4">
