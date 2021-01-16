@@ -37,7 +37,7 @@ function About() {
         <div className="col introCOl ">
           <h2>Hi !</h2>
           <p>
-            My name is Joe Mon I'm a 24 year old Front End Developer based in
+            My name is Joe Mon I'm a 24 year old Front End Developer based in (JAMStack)
             Nagercoil.
           </p>
           <p>
@@ -72,7 +72,6 @@ function About() {
               <h4> Languages I speak</h4>
               <p>HTML</p>
               <p>CSS</p>
-              <p>Sass</p>
               <p>Javascript</p>
             </div>
             <div className="col-md-4">
@@ -87,11 +86,11 @@ function About() {
             <div className="col-md-4">
               <VscLibrary className="AboutIcon" />
               <h3>Libraries</h3>
-              <h4> Libraries I Use</h4>
-              <p>Contentful</p>
+              <h4> Libraries I Use</h4> 
               <p>Framer Motion</p>
               <p>Jquery</p>
               <p>Animate.js</p>
+              <P>Moment.js</p>
               <p></p>
             </div>
             <div className="col-md-4">
@@ -99,15 +98,17 @@ function About() {
               <h3>Tools</h3>
               <h4> Tools I Use</h4>
               <p>Git/Github</p>
+              <p>Sass</p>
               <p>Gulp</p>
-              <p>Babel</p>
-              <p>Webpack</p>
+              <p>Babel</p>            
             </div>
             <div className="col-md-4">
               <FiServer className="AboutIcon" />
               <h3>Backend</h3>
               <h4> Server side</h4>
               <p>Firebase</p>
+              <p>Strapi</p>
+              <p>Contentful</p>
             </div>
           </div>
           <p>
