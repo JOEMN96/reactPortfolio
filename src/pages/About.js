@@ -79,6 +79,7 @@ function About() {
               <h3>Frameworks</h3>
               <h4> FrameWorks I Use</h4>
               <p>React</p>
+              <p>Gatsby Js</p>
               <p>Bootstrap</p>
               <p>Materialize Css</p>
               <p></p>
