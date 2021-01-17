@@ -101,7 +101,7 @@ function About() {
               <p>Git/Github</p>
               <p>Sass</p>
               <p>Gulp</p>
-              <p>Babel</p>            
+              <p>Redux</p>            
             </div>
             <div className="col-md-4">
               <FiServer className="AboutIcon" />
